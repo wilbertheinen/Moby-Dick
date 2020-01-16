@@ -1,0 +1,280 @@
+<!--[if !mso]><!-- -->
+<!-- Pop-up Styles -->
+<style>
+    @media only screen
+
+    /*and (-webkit-min-device-pixel-ratio:2)*/
+    and (max-width:1024px) {
+
+        /*@supports (-webkit-overflow-scrolling: touch) and (color:#ffff) {*/
+        div.ev-interactive {
+            width: auto !important;
+            height: auto !important;
+            max-height: none !important;
+            display: block !important;
+            overflow: visible !important
+        }
+
+        div.popup * {
+            font-family: 'Open Sans', arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            text-align: left;
+            vertical-align: top;
+            color: #7e8890
+        }
+
+        div.popup h2 {
+            font-size: 24px;
+            line-height: 1.1;
+            font-weight: bold;
+            color: #252b33;
+            margin: 0 0 5px 0
+        }
+
+        div.popup p {
+            margin: 0 0 10px 0
+        }
+
+        div.popup a.button {
+            display: inline-block;
+            border-radius: 3px;
+            background: #ff2b63;
+            line-height: 1;
+            color: #fff;
+            text-decoration: none;
+            padding: 13px 21px
+        }
+
+        div.overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            padding: 0;
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
+            z-index: 9998
+        }
+
+        div.popup {
+            position: fixed;
+            top: 50px;
+            width: 80%;
+            max-width: 600px;
+            padding: 10px;
+            background: #fff;
+            border-radius: 3px;
+            left: calc(-50vw + 50%);
+            right: calc(-50vw + 50%);
+            margin: 0 auto;
+            z-index: 9999
+        }
+
+        div.popup-close {
+            position: relative;
+            float: right;
+            width: 10%;
+            text-align: right
+        }
+
+        div.popup-close label {
+            cursor: pointer;
+            font-size: 40px;
+            line-height: 0.5
+        }
+
+        div.popup-content {
+            /*width: 90%;*/
+            padding: 10px
+        }
+
+        #ev-interactive-check:checked~div.popup-wrapper {
+            display: block !important
+        }
+
+        #popup-open:checked~div.popup,
+        #popup-open:checked~div.overlay {
+            opacity: 0;
+            animation: effect-1-in 0.3s linear 0s forwards
+        }
+
+        #popup-close:checked~div.popup,
+        #popup-close:checked~div.overlay {
+            opacity: 1;
+            animation: effect-1-out 0.3s linear 0s forwards
+        }
+
+        /*Effect 1 In*/
+        @keyframes effect-1-in {
+            0% {
+                opacity: 0;
+                transform: scale(0.4)
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        /*Effect 1 Out*/
+        @keyframes effect-1-out {
+            0% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(0.4)
+            }
+        }
+
+        /*Effect 2 In*/
+        @keyframes effect-2-in {
+            0% {
+                opacity: 0;
+                transform: translateZ(600px) rotateX(0deg)
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateZ(0px) rotateX(0deg)
+            }
+        }
+
+        /*Effect 2 Out*/
+        @keyframes effect-2-out {
+            0% {
+                opacity: 1;
+                transform: translateZ(0px) rotateX(0deg)
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateZ(600px) rotateX(0deg)
+            }
+        }
+
+        /*Effect 3 In*/
+        @keyframes effect-3-in {
+            0% {
+                opacity: 0;
+                transform: rotateX(-70deg)
+            }
+
+            100% {
+                opacity: 1;
+                transform: rotateX(0deg)
+            }
+        }
+
+        /*Effect 3 Out*/
+        @keyframes effect-3-out {
+            0% {
+                opacity: 1;
+                transform: rotateX(0deg)
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotateX(-70deg)
+            }
+        }
+
+        /*Effect 4 In*/
+        @keyframes effect-4-in {
+            0% {
+                opacity: 0;
+                transform: scale(2)
+            }
+
+            100% {
+                opacity: 1;
+                transform: scale(1)
+            }
+        }
+
+        /*Effect 4 Out*/
+        @keyframes effect-4-out {
+            0% {
+                opacity: 1;
+                transform: scale(1)
+            }
+
+            100% {
+                opacity: 0;
+                transform: scale(2)
+            }
+        }
+
+        /*Effect 5 In*/
+        @keyframes effect-5-in {
+            0% {
+                opacity: 0;
+                transform: translateY(-200%)
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0%)
+            }
+        }
+
+        /*Effect 5 Out*/
+        @keyframes effect-5-out {
+            0% {
+                opacity: 1;
+                transform: translateY(0%)
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-200%)
+            }
+        }
+
+        /*}*/
+    }
+</style>
+<style>
+    /*
+.★:not(#★),
+[owa] div.ev-interactive,
+body.MsgBody div.ev-interactive,
+div#msgBody div.ev-interactive,
+div[class*="ox-"] div.ev-interactive,
+div.java-script,
+#MessageViewBody div.ev-interactive,
+#MessageWebViewDiv div.ev-interactive,
+#secdiv div.ev-interactive {
+    width: 0 !important;
+    height: 0 !important;
+    max-height: 0 !important;
+    display: none !important;
+    overflow: hidden !important
+	
+}*/
+</style>
+<div class="ev-interactive">
+    <input id="ev-interactive-check" style="display: none" type="checkbox" checked="checked" />
+    <div class="popup-wrapper" style="display: none">
+        <!--[if !mso]><!-- -->
+        <input name="popup-toggle" class="fade-in" id="popup-open" style="display: none" type="radio" checked="checked" />
+        <input name="popup-toggle" class="fade-out" id="popup-close" style="display: none" type="radio" />
+        <!--<![endif]-->
+        <div class="popup">
+            <div class="popup-close">
+                <label for="popup-close">&times;</label>
+            </div>
+            <div class="popup-content">
+                <h2>Title</h2>
+                <p>Copy</p>
+                <a class="button" href="#tbd" alt=" - Button">Button</a>
+            </div>
+        </div>
+        <div class="overlay">&nbsp;</div>
+    </div>
+</div>
+<!--<![endif]-->
