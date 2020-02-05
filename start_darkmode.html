@@ -6,9 +6,17 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light dark">
+    <meta name="supported-color-schemes" content="light dark">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <base target="_blank">
     <title></title>
+    <style>
+        :root {
+            color-scheme: light dark;
+            supported-color-schemes: light dark;
+        }
+    </style>
     <!-- Reset Styles -->
     <style>
         * {
@@ -92,6 +100,47 @@
 
         #outlook a {
             padding: 0
+        }
+    </style>
+    <!-- Darkmode -->
+    <style>
+        @media (prefers-color-scheme: dark) {
+
+            body,
+            .ev-body,
+            .ev-wrapper {
+                background-color: #151312 !important;
+            }
+
+            /*Outlook.com*/
+            [style~="background-color:#ffffff"] {
+                background-color: #000000 !important
+            }
+
+            /*Apple Mail*/
+            [style*="background-color: #ffffff"] {
+                background-color: #000000 !important
+            }
+
+            /*Outlook for Mac*/
+            _:-webkit-full-screen,
+            _::-webkit-full-page-media,
+            _:future,
+            :root body:not(.Singleton) [style*="background-color: rgb(255, 255, 255)"] {
+                background-color: #000000 !important
+            }
+
+            h1,
+            h1 a,
+            h2,
+            h2 a {
+                color: #dad4cc !important
+            }
+
+            p,
+            p a {
+                color: #81776f !important
+            }
         }
     </style>
     <!-- Webfont Styles -->
