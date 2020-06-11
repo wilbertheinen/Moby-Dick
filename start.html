@@ -1,7 +1,14 @@
 <!--{strip}-->
+<!--{broadcast field='broadcastdate' assign='broadcastdate'}-->
+<!--{broadcast field='subject' assign='subject'}-->
+<!--{eval var=$subject assign='subject'}-->
+<!--{$startHead = '<head>'}-->
+<!--{$endHead = '</head>'}-->
 <!DOCTYPE html>
 <html lang="nl" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
-
+<!--{if $broadcastdate}-->
+<!--{$startHead}}{{$endHead}-->
+<!--{/if}-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +18,13 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <base target="_blank">
     <title></title>
+    <!--{if !$broadcastdate}-->
+    <style>
+        div[data-type=object-instance-collection] {
+            width: 100% !important
+        }
+    </style>
+    <!--{/if}-->
     <!-- Reset Styles -->
     <style>
         * {
@@ -22,7 +36,9 @@
         .ev-wrapper {
             width: 100%;
             height: 100%;
-            background-color: #eaeced
+            margin: 0 !important;
+            padding: 0 !important;
+            background: #eaeced
         }
 
         body,
@@ -41,11 +57,10 @@
         p {
             margin: 0;
             padding: 0;
-            font-size: 0;
             font-weight: normal;
             font-style: normal;
             -webkit-text-size-adjust: none;
-            -ms-text-size-adjust: none;
+            -ms-text-size-adjust: none
         }
 
         table {
@@ -62,10 +77,11 @@
 
         img {
             -ms-interpolation-mode: bicubic;
-            vertical-align: middle;
+            display: block;
             height: auto;
             line-height: 100%;
-            border: 0
+            border: 0;
+            min-width: 100%
         }
 
         ul,
@@ -318,13 +334,9 @@
     </style>
     <!-- Specific Yahoo!Mail Targeting -->
     <style>
-        .& .ev-wrapper {
-            display: table;
-            table-layout: fixed
-        }
-
+        .& .ev-wrapper,
         .& .yahoo-fix-height {
-            display: block
+            display: grid
         }
 
         /* Necessary when using interactive objects */
@@ -343,14 +355,10 @@
     <style>
         @media screen and (-webkit-min-device-pixel-ratio: 0) {
 
-            #MessageViewBody {
-                margin: 0 !important;
-                padding: 0 !important;
-                width: calc(100vw - 24.5px) !important
-            }
-
+            #MessageViewBody,
             #MessageWebViewDiv {
-                margin: 0 0 0 -24.5px !important
+                margin: 0 !important;
+                zoom: 1 !important
             }
 
             /* Necessary when using interactive objects */
@@ -421,8 +429,15 @@
 <body class="ev-body">
     <div style="display: none">[Place previewtext here]</div>
     <div style="display: none"> &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; </div>
-    <div role="article" aria-roledescription="email" aria-label="{{broadcast field='subject'}}" lang="nl" class="ev-wrapper">
+    <div role="article" aria-roledescription="email" aria-label="{{$subject}}" lang="nl" class="ev-wrapper">
     <!--{opencode}-->
+    <!--{if !$broadcastdate}-->
+    <center>
+    <!--{/if}-->
+    
+    <!--{if !$broadcastdate}-->
+    </center>
+    <!--{/if}-->
     </div>
 </body>
 
