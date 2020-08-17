@@ -15,8 +15,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
     <meta name="x-apple-disable-message-reformatting">
-    <meta name="color-scheme" content="light dark only">
-    <meta name="supported-color-schemes" content="light dark only">
+    <meta name="color-scheme" content="light only">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <base target="_blank">
     <title></title>
@@ -27,12 +26,6 @@
         }
     </style>
     <!--{/if}-->
-    <style>
-        :root {
-            color-scheme: light dark;
-            supported-color-schemes: light dark;
-        }
-    </style>
     <!-- Reset Styles -->
     <style>
         * {
@@ -118,6 +111,142 @@
 
         #outlook a {
             padding: 0
+        }
+    </style>
+    <!-- Darkmode -->
+    <!--{function name=invertColor}}
+        {{$hexTranslationArray = [
+            '0' => 'f',
+            '1' => 'e',
+            '2' => 'd',
+            '3' => 'c',
+            '4' => 'b',
+            '5' => 'a',
+            '6' => '9',
+            '7' => '8',
+            '8' => '7',
+            '9' => '6',
+            'a' => '5',
+            'b' => '4',
+            'c' => '3',
+            'd' => '2',
+            'e' => '1',
+            'f' => '0'
+            ]
+        }}
+
+        {{$color = $color|spacify:","}}
+        {{$originalHexArray = ","|explode:$color}}
+
+        {{foreach from=$originalHexArray item=i}}
+        {{$newHexArray[] = $hexTranslationArray[$i]}}
+        {{/foreach}}
+
+        #{{''|implode:$newHexArray}}
+    {{/function}-->
+    <meta name="color-scheme" content="light dark only">
+    <style>
+        :root {
+            color-scheme: light dark
+        }
+
+        @media (prefers-color-scheme: dark) {
+
+            body,
+            .ev-body,
+            .ev-wrapper {
+                background-color: {{invertColor color='#eaeced'}} !important;
+                background-image: linear-gradient({{invertColor color='#eaeced'}}, {{invertColor color='#eaeced'}}) !important
+            }
+
+            .content {
+                background-color: {{invertColor color='#fff'}} !important;
+                background-image: linear-gradient({{invertColor color='#fff'}}, {{invertColor color='#fff'}}) !important
+            }
+
+            .button,
+            .button a {
+                background-color: {{invertColor color='#ff2b63'}} !important;
+                background-image: linear-gradient({{invertColor color='#ff2b63'}}, {{invertColor color='#ff2b63'}}) !important;
+                border: 1px solid {{invertColor color='#ff2b63'}} !important;
+                color: {{invertColor color='#fff'}} !important;
+                -webkit-text-fill-color: {{invertColor color='#fff'}} !important
+            }
+
+            .button a {
+                border: 0 !important
+            }
+
+            .content h1,
+            .content h1 a,
+            .content h2,
+            .content h2 a {
+                color: {{invertColor color='#252b33'}} !important;
+                -webkit-text-fill-color: {{invertColor color='#252b33'}} !important
+            }
+
+            .content p,
+            .content p a {
+                color: {{invertColor color='#7e8890'}} !important;
+                -webkit-text-fill-color: {{invertColor color='#7e8890'}} !important;
+            }
+
+            img {
+                filter: brightness(.8) contrast(1.2)
+            }
+
+            img.invert {
+				filter: invert(1)
+            }
+
+            .dark-img {
+                display: block !important;
+                width: auto !important;
+                overflow: visible !important;
+                float: none !important;
+                max-height: inherit !important;
+                max-width: inherit !important;
+                line-height: auto !important;
+                margin-top: 0 !important;
+                visibility: inherit !important
+            }
+
+            .light-img {
+                display: none !important
+            }
+        }
+
+        [data-ogsb] body,
+        [data-ogsb] .ev-body,
+        [data-ogsb] .ev-wrapper {
+            background-color: {{invertColor color='#eaeced'}} !important
+        }
+
+        [data-ogsb] .content {
+            background-color: {{invertColor color='#fff'}} !important
+        }
+
+        [data-ogsb] .button,
+        [data-ogsb] .button a {
+            background-color: {{invertColor color='#ff2b63'}} !important;
+            border: 1px solid {{invertColor color='#ff2b63'}} !important;
+            color: {{invertColor color='#fff'}} !important
+        }
+
+        [data-ogsb] .button a {
+            border: 0 !important
+        }
+
+        [data-ogsb] h1,
+        [data-ogsb] h1 a,
+        [data-ogsb] h2,
+        [data-ogsb] h2 a {
+            color: {{invertColor color='#252b33'}} !important
+        }
+
+        [data-ogsb] p,
+        [data-ogsb] p a {
+            color: {{invertColor color='#7e8890'}} !important
         }
     </style>
     <!-- Webfont Styles -->
@@ -442,7 +571,7 @@
     <!--{if !$broadcastdate}-->
     <center>
     <!--{/if}-->
-
+    
     <!--{if !$broadcastdate}-->
     </center>
     <!--{/if}-->
