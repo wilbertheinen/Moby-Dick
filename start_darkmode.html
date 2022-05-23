@@ -15,7 +15,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
     <meta name="x-apple-disable-message-reformatting">
+<<<<<<< HEAD
     <meta name="color-scheme" content="dark light only">
+=======
+>>>>>>> a1d7320648d8a17163539e44e2e85783acdf1a9e
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <base target="_blank">
     <title></title>
@@ -33,8 +36,8 @@
         }
 
         body,
-        .ev-body,
-        .ev-wrapper {
+        .body,
+        .wrapper {
             width: 100%;
             height: 100%;
             margin: 0 !important;
@@ -153,8 +156,8 @@
         @media (prefers-color-scheme: dark) {
 
             body,
-            .ev-body,
-            .ev-wrapper {
+            .body,
+            .wrapper {
                 background-color: {{invertColor color='#eaeced'}} !important;
                 background-image: linear-gradient({{invertColor color='#eaeced'}}, {{invertColor color='#eaeced'}}) !important
             }
@@ -217,8 +220,8 @@
         }
 
         [data-ogsb] body,
-        [data-ogsb] .ev-body,
-        [data-ogsb] .ev-wrapper {
+        [data-ogsb] .body,
+        [data-ogsb] .wrapper {
             background-color: {{invertColor color='#eaeced'}} !important
         }
 
@@ -424,11 +427,11 @@
     <style>
         @media only screen and (-webkit-min-device-pixel-ratio:0),
         (min--moz-device-pixel-ratio:0) {
-            #ev-interactive-check:checked~.ev-fallback {
+            #interactive-check:checked~.fallback {
                 display: none
             }
 
-            #ev-interactive-check:checked~div .ev-interactive {
+            #interactive-check:checked~div .interactive {
                 display: block !important;
                 max-height: none !important
             }
@@ -436,22 +439,22 @@
     </style>
     <!-- Specific Gmail Styles, including Date/Phonenumber/Links Reset -->
     <style>
-        u+.ev-body a {
+        u+.body a {
             color: inherit;
             text-decoration: inherit
         }
 
         @media only screen and (max-width: 639px) {
 
-            u+.ev-body,
-            div>u+.ev-body {
+            u+.body,
+            div>u+.body {
                 width: 100vw !important;
                 min-width: 100vw !important;
                 margin: 0 !important;
                 padding: 0 !important
             }
 
-            div>u+.ev-body {
+            div>u+.body {
                 width: inherit !important;
                 min-width: inherit !important;
             }
@@ -459,19 +462,19 @@
 
         /* Necessary when using interactive objects */
         @media screen and (max-width:9999px) {
-            u+.ev-body .ev-fallback {
+            u+.body .fallback {
                 display: block !important;
                 max-height: none
             }
 
-            u+.ev-body .ev-interactive {
+            u+.body .interactive {
                 display: none !important
             }
         }
     </style>
     <!-- Specific Yahoo!Mail Targeting -->
     <style>
-        .& .ev-wrapper,
+        .& .wrapper,
         .& .yahoo-fix-height {
             display: grid
         }
@@ -479,12 +482,12 @@
         /* Necessary when using interactive objects */
         .yahoo-fix {}
 
-        .& .ev-fallback {
+        .& .fallback {
             display: block !important;
             max-height: none
         }
 
-        .& .ev-interactive {
+        .& .interactive {
             display: none !important
         }
     </style>
@@ -499,15 +502,15 @@
             }
 
             /* Necessary when using interactive objects */
-            #MessageViewBody .ev-fallback {
+            #MessageViewBody .fallback {
                 display: block !important
             }
 
-            #MessageViewBody .ev-interactive {
+            #MessageViewBody .interactive {
                 display: none !important
             }
 
-            #MessageViewBody .ev-samsung {
+            #MessageViewBody .samsung {
                 display: none !important
             }
         }
@@ -521,7 +524,7 @@
         }
 
         body[data-outlook-cycle] .outlook-overflow-scaling,
-        body[data-outlook-cycle] .ev-wrapper {
+        body[data-outlook-cycle] .wrapper {
             width: 100vw !important;
             min-width: 100vw !important;
             height: auto !important;
@@ -530,11 +533,11 @@
         }
 
         /* Necessary when using interactive objects */
-        body[data-outlook-cycle] .ev-fallback {
+        body[data-outlook-cycle] .fallback {
             display: block !important
         }
 
-        body[data-outlook-cycle] .ev-interactive {
+        body[data-outlook-cycle] .interactive {
             display: none !important
         }
     </style>
@@ -566,7 +569,7 @@
 <body class="ev-body">
     <div style="display: none">[Place previewtext here]</div>
     <div style="display: none"> &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; </div>
-    <div role="article" aria-roledescription="email" aria-label="{{$subject}}" lang="nl" class="ev-wrapper">
+    <div role="article" aria-roledescription="email" aria-label="{{$subject}}" lang="nl" class="wrapper">
     <!--{opencode}-->
     <!--{if !$broadcastdate}-->
     <center>
