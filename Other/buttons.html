@@ -32,8 +32,8 @@
         }
 
         body,
-        .ev-body,
-        .ev-wrapper {
+        .md-body,
+        .md-wrapper {
             width: 100%;
             height: 100%;
             margin: 0 !important;
@@ -288,11 +288,11 @@
     <style>
         @media only screen and (-webkit-min-device-pixel-ratio:0),
         (min--moz-device-pixel-ratio:0) {
-            #ev-interactive-check:checked~.ev-fallback {
+            #md-interactive-check:checked~.md-fallback {
                 display: none
             }
 
-            #ev-interactive-check:checked~div .ev-interactive {
+            #md-interactive-check:checked~div .md-interactive {
                 display: block !important;
                 max-height: none !important
             }
@@ -300,22 +300,22 @@
     </style>
     <!-- Specific Gmail Styles, including Date/Phonenumber/Links Reset -->
     <style>
-        u+.ev-body a {
+        u+.md-body a {
             color: inherit;
             text-decoration: inherit
         }
 
         @media only screen and (max-width: 639px) {
 
-            u+.ev-body,
-            div>u+.ev-body {
+            u+.md-body,
+            div>u+.md-body {
                 width: 100vw !important;
                 min-width: 100vw !important;
                 margin: 0 !important;
                 padding: 0 !important
             }
 
-            div>u+.ev-body {
+            div>u+.md-body {
                 width: inherit !important;
                 min-width: inherit !important;
             }
@@ -323,19 +323,19 @@
 
         /* Necessary when using interactive objects */
         @media screen and (max-width:9999px) {
-            u+.ev-body .ev-fallback {
+            u+.md-body .md-fallback {
                 display: block !important;
                 max-height: none
             }
 
-            u+.ev-body .ev-interactive {
+            u+.md-body .md-interactive {
                 display: none !important
             }
         }
     </style>
     <!-- Specific Yahoo!Mail Targeting -->
     <style>
-        .& .ev-wrapper,
+        .& .md-wrapper,
         .& .yahoo-fix-height {
             display: grid
         }
@@ -343,12 +343,12 @@
         /* Necessary when using interactive objects */
         .yahoo-fix {}
 
-        .& .ev-fallback {
+        .& .md-fallback {
             display: block !important;
             max-height: none
         }
 
-        .& .ev-interactive {
+        .& .md-interactive {
             display: none !important
         }
     </style>
@@ -363,15 +363,15 @@
             }
 
             /* Necessary when using interactive objects */
-            #MessageViewBody .ev-fallback {
+            #MessageViewBody .md-fallback {
                 display: block !important
             }
 
-            #MessageViewBody .ev-interactive {
+            #MessageViewBody .md-interactive {
                 display: none !important
             }
 
-            #MessageViewBody .ev-samsung {
+            #MessageViewBody .md-samsung {
                 display: none !important
             }
         }
@@ -385,7 +385,7 @@
         }
 
         body[data-outlook-cycle] .outlook-overflow-scaling,
-        body[data-outlook-cycle] .ev-wrapper {
+        body[data-outlook-cycle] .md-wrapper {
             width: 100vw !important;
             min-width: 100vw !important;
             height: auto !important;
@@ -394,11 +394,11 @@
         }
 
         /* Necessary when using interactive objects */
-        body[data-outlook-cycle] .ev-fallback {
+        body[data-outlook-cycle] .md-fallback {
             display: block !important
         }
 
-        body[data-outlook-cycle] .ev-interactive {
+        body[data-outlook-cycle] .md-interactive {
             display: none !important
         }
     </style>
@@ -427,117 +427,117 @@
 	<![endif]-->
 </head>
 
-<body class="ev-body">
+<body class="md-body">
     <div style="display: none">[Place previewtext here]</div>
     <div style="display: none"> &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; &#847; </div>
-    <div role="article" aria-roledescription="email" aria-label="{{$subject}}" lang="nl" class="ev-wrapper">
+    <div role="article" aria-roledescription="email" aria-label="{{$subject}}" lang="nl" class="md-wrapper">
     <!--{opencode}-->
     <!--{if !$broadcastdate}-->
     <center>
     <!--{/if}-->
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 3px; border: 1px solid #ff2b63; background: #ff2b63" class="button">
-                <a href="#tbd" alt=" - Button" style="padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63; display: inline-block; color: #fff; text-decoration: none">
+                <a href="#tbd" style="padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63; display: inline-block; color: #fff; text-decoration: none">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]-->Yes yes, we can go!&nbsp;&raquo;
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 3px; border: 0; mso-border-alt: 1px solid #ff2b63; border-bottom: 2px solid #a01b3e; mso-border-bottom-alt: 2px solid #a01b3e; background: #ff2b63" class="button">
-                <a href="#tbd" alt=" - Button" style="display: inline-block; color: #fff; text-decoration: none; padding: 13px 22px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63">
+                <a href="#tbd" style="display: inline-block; color: #fff; text-decoration: none; padding: 13px 22px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]-->Yes yes, we can go!&nbsp;&raquo;
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 3px; border: 1px solid #ff2b63; background: #fff">
-                <a href="#tbd" alt=" - Button" style="display: inline-block; color: #ff2b63; text-decoration: none; padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #fff">
+                <a href="#tbd" style="display: inline-block; color: #ff2b63; text-decoration: none; padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #fff">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]-->Yes yes, we can go!&nbsp;&raquo;
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 3px; border: 1px solid #ff2b63; color: #ff2b63">
-                <a href="#tbd" alt=" - Button" style="display: inline-block; color: #ff2b63; text-decoration: none; padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #cccccc">
+                <a href="#tbd" style="display: inline-block; color: #ff2b63; text-decoration: none; padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #cccccc">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]-->Yes yes, we can go!&nbsp;&raquo;
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 3px; border: 1px solid #ff2b63; background: #ff2b63" class="button">
-                <a href="#tbd" alt=" - Button" style="padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63; display: inline-block; color: #fff; text-decoration: none">
+                <a href="#tbd" style="padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63; display: inline-block; color: #fff; text-decoration: none">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--><img src="https://e.directa.nl/public/Qander/fa67c9bb9804edb4032967947380bbb0/taart_icon_4.png" alt="" style="border: 0; vertical-align: top; height: 16px" height="16"><span style="vertical-align: top; mso-text-raise: 2px">&nbsp;&nbsp;Yes yes, we can go!</span>
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 22px; border: 1px solid #ff2b63; background: #ff2b63" class="button">
-                <a href="#tbd" alt=" - Button" style="padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63; display: inline-block; color: #fff; text-decoration: none">
+                <a href="#tbd" style="padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63; display: inline-block; color: #fff; text-decoration: none">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]-->Yes yes, we can go!&nbsp;&raquo;
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 22px; border: 0; mso-border-alt: 1px solid #ff2b63; border-bottom: 2px solid #a01b3e; mso-border-bottom-alt: 2px solid #a01b3e; background: #ff2b63" class="button">
-                <a href="#tbd" alt=" - Button" style="display: inline-block; color: #fff; text-decoration: none; padding: 13px 22px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63">
+                <a href="#tbd" style="display: inline-block; color: #fff; text-decoration: none; padding: 13px 22px; mso-padding-alt: 11px; mso-border-alt: 1px solid #ff2b63">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]-->Yes yes, we can go!&nbsp;&raquo;
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 22px; border: 1px solid #ff2b63; background: #fff; color: #ff2b63">
-                <a href="#tbd" alt=" - Button" style="display: inline-block; color: #ff2b63; text-decoration: none; padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #fff">
+                <a href="#tbd" style="display: inline-block; color: #ff2b63; text-decoration: none; padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #fff">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]-->Yes yes, we can go!&nbsp;&raquo;
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation" style="border-collapse: separate">
+    <table role="none" style="border-collapse: separate">
         <tr>
             <td style="text-align: center; vertical-align: middle; font: 16px/1 'Open Sans', arial, sans-serif; mso-line-height-alt: 16px; border-radius: 22px; border: 1px solid #ff2b63; color: #ff2b63">
-                <a href="#tbd" alt=" - Button" style="display: inline-block; color: #ff2b63; text-decoration: none; padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #cccccc">
+                <a href="#tbd" style="display: inline-block; color: #ff2b63; text-decoration: none; padding: 13px 21px; mso-padding-alt: 11px; mso-border-alt: 1px solid #cccccc">
                     <!--[if mso]>&nbsp;&nbsp;<![endif]-->Yes yes, we can go!&nbsp;&raquo;
                     <!--[if mso]>&nbsp;&nbsp;<![endif]--></a>
             </td>
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation">
+    <table role="none">
         <tr>
             <td>
                 <!--[if !mso]><!-->
-                <a href="#tbd" alt=" - Button">
+                <a href="#tbd">
                     <!--<![endif]-->
-                    <table role="presentation" style="border-collapse: separate; border-radius: 3px; background: #ff2b63" class="button">
+                    <table role="none" style="border-collapse: separate; border-radius: 3px; background: #ff2b63" class="button">
                         <tr>
                             <td style="padding: 13px 22px">
-                                <table role="presentation">
+                                <table role="none">
                                     <tr>
                                         <td style="text-align: center; vertical-align: middle; font: 16px/1.5 'Open Sans', arial, sans-serif; mso-line-height-alt: 24px; color: #fff">
-                                            <a href="#tbd" alt=" - Button" style="color: #fff; text-decoration: none">Yes yes, we can go!<br>Yes yes, we can go!</a>
+                                            <a href="#tbd" style="color: #fff; text-decoration: none">Yes yes, we can go!<br>Yes yes, we can go!</a>
                                         </td>
                                         <td style="text-align: right; vertical-align: top; font: 16px/1.5 'Open Sans', arial, sans-serif; mso-line-height-alt: 24px; color: #fff">&nbsp;&raquo;</td>
                                     </tr>
@@ -552,19 +552,19 @@
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation">
+    <table role="none">
         <tr>
             <td>
                 <!--[if !mso]><!-->
-                <a href="#tbd" alt=" - Button">
+                <a href="#tbd">
                     <!--<![endif]-->
-                    <table role="presentation" style="border-collapse: separate; border-bottom: 2px solid #a01b3e; border-radius: 3px; background: #ff2b63" class="button">
+                    <table role="none" style="border-collapse: separate; border-bottom: 2px solid #a01b3e; border-radius: 3px; background: #ff2b63" class="button">
                         <tr>
                             <td style="padding: 12px 22px">
-                                <table role="presentation">
+                                <table role="none">
                                     <tr>
                                         <td style="text-align: center; vertical-align: middle; font: 16px/1.5 'Open Sans', arial, sans-serif; mso-line-height-alt: 24px; color: #fff">
-                                            <a href="#tbd" alt=" - Button" style="color: #fff; text-decoration: none">Yes yes, we can go!<br>Yes yes, we can go!</a>
+                                            <a href="#tbd" style="color: #fff; text-decoration: none">Yes yes, we can go!<br>Yes yes, we can go!</a>
                                         </td>
                                         <td style="text-align: right; vertical-align: middle; font: 16px/1.5 'Open Sans', arial, sans-serif; mso-line-height-alt: 24px; color: #fff">&nbsp;&raquo;</td>
                                     </tr>
@@ -579,19 +579,19 @@
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation">
+    <table role="none">
         <tr>
             <td>
                 <!--[if !mso]><!-->
-                <a href="#tbd" alt=" - Button">
+                <a href="#tbd">
                     <!--<![endif]-->
-                    <table role="presentation" style="border-collapse: separate; border: 1px solid #ff2b63; border-radius: 3px; background: #fff">
+                    <table role="none" style="border-collapse: separate; border: 1px solid #ff2b63; border-radius: 3px; background: #fff">
                         <tr>
                             <td style="padding: 12px 21px">
-                                <table role="presentation">
+                                <table role="none">
                                     <tr>
                                         <td style="text-align: center; vertical-align: middle; font: 16px/1.5 'Open Sans', arial, sans-serif; mso-line-height-alt: 24px; color: #ff2b63">
-                                            <a href="#tbd" alt=" - Button" style="color: #ff2b63; text-decoration: none">Yes yes, we can go!<br>Yes yes, we can go!</a>
+                                            <a href="#tbd" style="color: #ff2b63; text-decoration: none">Yes yes, we can go!<br>Yes yes, we can go!</a>
                                         </td>
                                         <td style="text-align: right; vertical-align: bottom; font: 16px/1.5 'Open Sans', arial, sans-serif; mso-line-height-alt: 24px; color: #ff2b63">&nbsp;&raquo;</td>
                                     </tr>
@@ -606,19 +606,19 @@
         </tr>
     </table><br>
     &nbsp;<br>
-    <table role="presentation">
+    <table role="none">
         <tr>
             <td>
                 <!--[if !mso]><!-->
-                <a href="#tbd" alt=" - Button">
+                <a href="#tbd">
                     <!--<![endif]-->
-                    <table role="presentation" style="border-collapse: separate; border: 1px solid #ff2b63; border-radius: 3px">
+                    <table role="none" style="border-collapse: separate; border: 1px solid #ff2b63; border-radius: 3px">
                         <tr>
                             <td style="padding: 12px 21px">
-                                <table role="presentation">
+                                <table role="none">
                                     <tr>
                                         <td style="text-align: center; vertical-align: middle; font: 16px/1.5 'Open Sans', arial, sans-serif; mso-line-height-alt: 24px; color: #ff2b63">
-                                            <a href="#tbd" alt=" - Button" style="color: #ff2b63; text-decoration: none">Yes yes, we can go!<br>Yes yes, we can go!</a>
+                                            <a href="#tbd" style="color: #ff2b63; text-decoration: none">Yes yes, we can go!<br>Yes yes, we can go!</a>
                                         </td>
                                         <td style="text-align: right; vertical-align: bottom; font: 16px/1.5 'Open Sans', arial, sans-serif; mso-line-height-alt: 24px; color: #ff2b63">&nbsp;&raquo;</td>
                                     </tr>

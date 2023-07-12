@@ -7,7 +7,7 @@
     and (max-width:1024px) {
 
         /*@supports (-webkit-overflow-scrolling: touch) and (color:#ffff) {*/
-        div.ev-interactive {
+        div.interactive {
             width: auto !important;
             height: auto !important;
             max-height: none !important;
@@ -89,7 +89,7 @@
             padding: 10px
         }
 
-        #ev-interactive-check:checked~div.popup-wrapper {
+        #interactive-check:checked~div.popup-wrapper {
             display: block !important
         }
 
@@ -241,14 +241,14 @@
 <style>
     /*
 .★:not(#★),
-[owa] div.ev-interactive,
-body.MsgBody div.ev-interactive,
-div#msgBody div.ev-interactive,
-div[class*="ox-"] div.ev-interactive,
+[owa] div.interactive,
+body.MsgBody div.interactive,
+div#msgBody div.interactive,
+div[class*="ox-"] div.interactive,
 div.java-script,
-#MessageViewBody div.ev-interactive,
-#MessageWebViewDiv div.ev-interactive,
-#secdiv div.ev-interactive {
+#MessageViewBody div.interactive,
+#MessageWebViewDiv div.interactive,
+#secdiv div.interactive {
     width: 0 !important;
     height: 0 !important;
     max-height: 0 !important;
@@ -257,8 +257,8 @@ div.java-script,
 	
 }*/
 </style>
-<div class="ev-interactive">
-    <input id="ev-interactive-check" style="display: none" type="checkbox" checked="checked">
+<div class="interactive">
+    <input id="interactive-check" style="display: none" type="checkbox" checked="checked">
     <div class="popup-wrapper" style="display: none">
         <!--[if !mso]><!-- -->
         <input name="popup-toggle" class="fade-in" id="popup-open" style="display: none" type="radio" checked="checked">
@@ -271,7 +271,7 @@ div.java-script,
             <div class="popup-content">
                 <h2>Title</h2>
                 <p>Copy</p>
-                <a class="button" href="#tbd" alt=" - Button">Button</a>
+                <a class="button" href="#tbd">Button</a>
             </div>
         </div>
         <div class="overlay">&nbsp;</div>

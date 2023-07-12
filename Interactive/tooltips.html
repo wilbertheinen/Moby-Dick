@@ -1,8 +1,8 @@
 <!-- START TOOLTIPS -->
-<table role="presentation" align="center" style="width: 640px; margin: 0 auto" class="w100pc">
+<table role="none" align="center" style="width: 640px; margin: 0 auto" class="w100pc">
     <tr>
         <td>
-            <style class="ev-tooltips">
+            <style class="tooltips">
                 /* Background image Desktop Webkit/Firefox */
                 @media only screen and (-webkit-min-device-pixel-ratio:0),
                 (min--moz-device-pixel-ratio:0) {
@@ -43,7 +43,7 @@
                     }
 
                     /* Background image */
-                    .ev-tooltip-bgimage {
+                    .tooltip-bgimage {
                         position: relative;
                         display: block;
                         overflow: hidden;
@@ -54,16 +54,16 @@
                     }
 
                     /* Hide checkboxes. With display: none we lose hover state in Safari */
-                    .ev-tooltip {
+                    .tooltip {
                         position: absolute;
                         opacity: 0
                     }
 
                     /* Tooltip anchors look and feel/behaviour */
-                    .ev-tooltip1 img.ev-tooltipImage,
-                    .ev-tooltip2 img.ev-tooltipImage,
-                    .ev-tooltip3 img.ev-tooltipImage,
-                    .ev-tooltip4 img.ev-tooltipImage {
+                    .tooltip1 img.tooltipImage,
+                    .tooltip2 img.tooltipImage,
+                    .tooltip3 img.tooltipImage,
+                    .tooltip4 img.tooltipImage {
                         display: inline-block;
                         cursor: pointer;
                         animation-name: pulse_animation;
@@ -74,38 +74,38 @@
                     }
 
                     /* Start tooltip anchors positioning */
-                    .ev-tooltip1,
-                    .ev-tooltip2,
-                    .ev-tooltip3,
-                    .ev-tooltip4 {
+                    .tooltip1,
+                    .tooltip2,
+                    .tooltip3,
+                    .tooltip4 {
                         position: absolute
                     }
 
-                    .ev-tooltip1 {
+                    .tooltip1 {
                         left: 75px;
                         top: 325px
                     }
 
-                    .ev-tooltip2 {
+                    .tooltip2 {
                         left: 359px;
                         top: 230px
                     }
 
-                    .ev-tooltip3 {
+                    .tooltip3 {
                         left: 400px;
                         top: 43px
                     }
 
                     /* End tooltip anchors positioning */
                     /* Start tooltip content default state*/
-                    #ev-tooltip1~div #ev-tooltip1-content,
-                    #ev-tooltip2~div #ev-tooltip2-content,
-                    #ev-tooltip3~div #ev-tooltip3-content,
-                    #ev-tooltip4~div #ev-tooltip4-content,
-                    #ev-tooltip1~#ev-mtooltip1-content,
-                    #ev-tooltip2~#ev-mtooltip2-content,
-                    #ev-tooltip3~#ev-mtooltip3-content,
-                    #ev-tooltip4~#ev-mtooltip4-content {
+                    #tooltip1~div #tooltip1-content,
+                    #tooltip2~div #tooltip2-content,
+                    #tooltip3~div #tooltip3-content,
+                    #tooltip4~div #tooltip4-content,
+                    #tooltip1~#mtooltip1-content,
+                    #tooltip2~#mtooltip2-content,
+                    #tooltip3~#mtooltip3-content,
+                    #tooltip4~#mtooltip4-content {
                         opacity: 0;
                         visibility: hidden;
                         font-size: 0;
@@ -113,24 +113,24 @@
                         max-height: 0
                     }
 
-                    #ev-tooltip1~div #ev-tooltip1-content,
-                    #ev-tooltip2~div #ev-tooltip2-content,
-                    #ev-tooltip3~div #ev-tooltip3-content,
-                    #ev-tooltip4~div #ev-tooltip4-content {
+                    #tooltip1~div #tooltip1-content,
+                    #tooltip2~div #tooltip2-content,
+                    #tooltip3~div #tooltip3-content,
+                    #tooltip4~div #tooltip4-content {
                         z-index: 1;
                         transition: opacity 0.3s
                     }
 
                     /* End tooltip content default state*/
                     /* Start tooltip content position/visibility when checked/hover desktop */
-                    #ev-tooltip1:checked~div #ev-tooltip1-content,
-                    #ev-tooltip1:hover~div #ev-tooltip1-content,
-                    #ev-tooltip2:checked~div #ev-tooltip2-content,
-                    #ev-tooltip2:hover~div #ev-tooltip2-content,
-                    #ev-tooltip3:checked~div #ev-tooltip3-content,
-                    #ev-tooltip3:hover~div #ev-tooltip3-content,
-                    #ev-tooltip4:checked~div #ev-tooltip4-content,
-                    #ev-tooltip4:hover~div #ev-tooltip4-content {
+                    #tooltip1:checked~div #tooltip1-content,
+                    #tooltip1:hover~div #tooltip1-content,
+                    #tooltip2:checked~div #tooltip2-content,
+                    #tooltip2:hover~div #tooltip2-content,
+                    #tooltip3:checked~div #tooltip3-content,
+                    #tooltip3:hover~div #tooltip3-content,
+                    #tooltip4:checked~div #tooltip4-content,
+                    #tooltip4:hover~div #tooltip4-content {
                         position: absolute;
                         background: #fff;
                         width: max-content;
@@ -150,78 +150,78 @@
 
                     /* End tooltip content position/visibility when checked/hover desktop */
                     /* Start tooltip content + hook positioning */
-                    .ev-tooltip-content-position-top-left div#ev-tooltip1-content {
+                    .tooltip-content-position-top-left div#tooltip1-content {
                         right: 50px;
                         bottom: 65px
                     }
 
-                    .ev-tooltip-content-position-top-right div#ev-tooltip1-content {
+                    .tooltip-content-position-top-right div#tooltip1-content {
                         bottom: 65px;
                         left: 50px
                     }
 
-                    .ev-tooltip-content-position-bottom-left div#ev-tooltip1-content {
+                    .tooltip-content-position-bottom-left div#tooltip1-content {
                         top: 65px;
                         right: 50px
                     }
 
-                    .ev-tooltip-content-position-bottom-right div#ev-tooltip1-content {
+                    .tooltip-content-position-bottom-right div#tooltip1-content {
                         top: 65px;
                         left: 50px
                     }
 
-                    .ev-tooltip-content-position-top-left div#ev-tooltip2-content {
+                    .tooltip-content-position-top-left div#tooltip2-content {
                         right: 50px;
                         bottom: 65px
                     }
 
-                    .ev-tooltip-content-position-top-right div#ev-tooltip2-content {
+                    .tooltip-content-position-top-right div#tooltip2-content {
                         bottom: 65px;
                         left: 50px
                     }
 
-                    .ev-tooltip-content-position-bottom-left div#ev-tooltip2-content {
+                    .tooltip-content-position-bottom-left div#tooltip2-content {
                         top: 65px;
                         right: 50px
                     }
 
-                    .ev-tooltip-content-position-bottom-right div#ev-tooltip2-content {
+                    .tooltip-content-position-bottom-right div#tooltip2-content {
                         top: 65px;
                         left: 50px
                     }
 
-                    .ev-tooltip-content-position-top-left div#ev-tooltip3-content {
+                    .tooltip-content-position-top-left div#tooltip3-content {
                         right: 50px;
                         bottom: 65px
                     }
 
-                    .ev-tooltip-content-position-top-right div#ev-tooltip3-content {
+                    .tooltip-content-position-top-right div#tooltip3-content {
                         bottom: 65px;
                         left: 50px
                     }
 
-                    .ev-tooltip-content-position-bottom-left div#ev-tooltip3-content {
+                    .tooltip-content-position-bottom-left div#tooltip3-content {
                         top: 65px;
                         right: 50px
                     }
 
-                    .ev-tooltip-content-position-bottom-right div#ev-tooltip3-content {
+                    .tooltip-content-position-bottom-right div#tooltip3-content {
                         top: 65px;
                         left: 50px
                     }
 
                     /* Tooltip content hooks */
-                    #ev-tooltip1~div #ev-tooltip1-content::after,
-                    #ev-tooltip2~div #ev-tooltip2-content::after,
-                    #ev-tooltip3~div #ev-tooltip3-content::after,
-                    #ev-tooltip4~div #ev-tooltip4-content::after {
+                    #tooltip1~div #tooltip1-content::after,
+                    #tooltip2~div #tooltip2-content::after,
+                    #tooltip3~div #tooltip3-content::after,
+                    #tooltip4~div #tooltip4-content::after {
                         content: '';
                         position: absolute;
                         width: 0;
                         height: 0
                     }
 
-                    .ev-tooltip-content-position-bottom-right div::after {
+                    .tooltip-content-position-bottom-right div::after {
                         top: 10px;
                         left: 10px;
                         border-width: 15px;
@@ -233,7 +233,7 @@
                         margin: -20px auto auto -10px
                     }
 
-                    .ev-tooltip-content-position-bottom-left div::after {
+                    .tooltip-content-position-bottom-left div::after {
                         top: 10px;
                         right: 10px;
                         border-width: 15px;
@@ -245,7 +245,7 @@
                         margin: -20px -10px auto auto
                     }
 
-                    .ev-tooltip-content-position-top-left div::after {
+                    .tooltip-content-position-top-left div::after {
                         right: 10px;
                         bottom: 10px;
                         border-width: 15px;
@@ -257,7 +257,7 @@
                         margin: auto -10px -20px auto
                     }
 
-                    .ev-tooltip-content-position-top-right div::after {
+                    .tooltip-content-position-top-right div::after {
                         bottom: 10px;
                         left: 10px;
                         border-width: 15px;
@@ -276,7 +276,7 @@
                 @media only screen and (max-width: 640px) {
 
                     /* Background image */
-                    .ev-tooltip-bgimage {
+                    .tooltip-bgimage {
                         position: relative;
                         display: block;
                         overflow: hidden;
@@ -285,31 +285,31 @@
                     }
 
                     /*Start tooltip anchors positioning on mobile with vw units calculated and based on relative desktop positioning.Left = (desktop position left / desktop width) * 100Top = (desktop position top / desktop width) * 100*/
-                    .ev-tooltip1 {
+                    .tooltip1 {
                         left: calc(15.625vw - 25px);
                         top: calc(54.6875vw - 25px)
                     }
 
-                    .ev-tooltip2 {
+                    .tooltip2 {
                         left: calc(60vw - 25px);
                         top: calc(39.84375vw - 25px)
                     }
 
-                    .ev-tooltip3 {
+                    .tooltip3 {
                         left: calc(66.40625vw - 25px);
                         top: calc(10.625vw - 25px)
                     }
 
                     /* End tooltip anchors positioning on mobile with vw units calculated and based on relative desktop positioning */
                     /* Desktop tooltip content state on mobile */
-                    #ev-tooltip1:checked~div #ev-tooltip1-content,
-                    #ev-tooltip1:hover~div #ev-tooltip1-content,
-                    #ev-tooltip2:checked~div #ev-tooltip2-content,
-                    #ev-tooltip2:hover~div #ev-tooltip2-content,
-                    #ev-tooltip3:checked~div #ev-tooltip3-content,
-                    #ev-tooltip3:hover~div #ev-tooltip3-content,
-                    #ev-tooltip4:checked~div #ev-tooltip4-content,
-                    #ev-tooltip4:hover~div #ev-tooltip4-content {
+                    #tooltip1:checked~div #tooltip1-content,
+                    #tooltip1:hover~div #tooltip1-content,
+                    #tooltip2:checked~div #tooltip2-content,
+                    #tooltip2:hover~div #tooltip2-content,
+                    #tooltip3:checked~div #tooltip3-content,
+                    #tooltip3:hover~div #tooltip3-content,
+                    #tooltip4:checked~div #tooltip4-content,
+                    #tooltip4:hover~div #tooltip4-content {
                         max-height: 0;
                         padding: 0;
                         opacity: 0;
@@ -317,10 +317,10 @@
                     }
 
                     /* Mobile tooltip content state on mobile when checked */
-                    #ev-tooltip1:checked~#ev-mtooltip1-content,
-                    #ev-tooltip2:checked~#ev-mtooltip2-content,
-                    #ev-tooltip3:checked~#ev-mtooltip3-content,
-                    #ev-tooltip4:checked~#ev-mtooltip4-content {
+                    #tooltip1:checked~#mtooltip1-content,
+                    #tooltip2:checked~#mtooltip2-content,
+                    #tooltip3:checked~#mtooltip3-content,
+                    #tooltip4:checked~#mtooltip4-content {
                         background: #fff;
                         width: 100%;
                         text-align: left;
@@ -336,32 +336,32 @@
                     }
                 }
             </style>
-            <table role="presentation" width="100%">
+            <table role="none" width="100%">
                 <tr>
                     <td>
                         <!--[if !mso]><!-- -->
-                        <input name="webkit" type="checkbox" checked="checked" style="display: none; max-height: 0; visibility: hidden" id="ev-interactive-check">
+                        <input name="webkit" type="checkbox" checked="checked" style="display: none; max-height: 0; visibility: hidden" id="interactive-check">
                         <!--<![endif]-->
-                        <div class="ev-fallback">
+                        <div class="fallback">
                             <a href="https://myclang.com/16/65/20/43481a495f7886a88eec1e66994b3cc88f16ab93/DJxy7sFIH4zHy7M6RCn-0uvlS2ZTY8DsfwXq722HmUr6U9iEmMYfMHWB08Qa_TepZBVzmJPNMAYS3V22lxC-bfuHPFak0fVVzCpf9DsFQGfnHWz_TM81MBQrZ8XLQQKV">
                                 <img src="https://myclang.com/public/operations/cd2588dd1e5ed560332fd2d23e3a0f30/garden1024x768_4.jpg" width="640" alt="Garden" style="vertical-align: middle; border: 0; min-width: 100%; width: 640px; min-width: 100%; max-width: 100%">
                             </a>
                         </div>
-                        <div class="ev-samsung">
+                        <div class="samsung">
                             <!--[if !mso]><!-- -->
-                            <div style="display: none; max-height: 0; overflow: hidden" class="ev-interactive">
-                                <input name="ev-tooltip" type="checkbox" id="ev-tooltip1" class="ev-tooltip">
-                                <input name="ev-tooltip" type="checkbox" id="ev-tooltip2" class="ev-tooltip">
-                                <input name="ev-tooltip" type="checkbox" id="ev-tooltip3" class="ev-tooltip">
-                                <div class="ev-tooltip-bgimage">
-                                    <label for="ev-tooltip1" class="ev-tooltip1">
-                                        <img src="https://myclang.com/public/operations/fde9cd413018/8c/06/100x_8c0656d50f139dbb6003ec839e1b846f.png" width="50" alt="" style="vertical-align: middle; border: 0" class="ev-tooltipImage">
-                                        <div class="ev-tooltip-content-position-bottom-right">
-                                            <div id="ev-tooltip1-content">
-                                                <table role="presentation">
+                            <div style="display: none; max-height: 0; overflow: hidden" class="interactive">
+                                <input name="tooltip" type="checkbox" id="tooltip1" class="tooltip">
+                                <input name="tooltip" type="checkbox" id="tooltip2" class="tooltip">
+                                <input name="tooltip" type="checkbox" id="tooltip3" class="tooltip">
+                                <div class="tooltip-bgimage">
+                                    <label for="tooltip1" class="tooltip1">
+                                        <img src="https://myclang.com/public/operations/fde9cd413018/8c/06/100x_8c0656d50f139dbb6003ec839e1b846f.png" width="50" alt="" style="vertical-align: middle; border: 0" class="tooltipImage">
+                                        <div class="tooltip-content-position-bottom-right">
+                                            <div id="tooltip1-content">
+                                                <table role="none">
                                                     <tr>
                                                         <td>
-                                                            <table role="presentation" align="left">
+                                                            <table role="none" align="left">
                                                                 <tr>
                                                                     <td style="padding: 0 10px 10px 0">
                                                                         <img src="https://myclang.com/public/operations/cd2588dd1e5ed560332fd2d23e3a0f30/litmus-pillow-sq-1-300x300_11.png">
@@ -375,24 +375,24 @@
                                             </div>
                                         </div>
                                     </label>
-                                    <label for="ev-tooltip2" class="ev-tooltip2">
-                                        <img src="https://myclang.com/public/operations/fde9cd413018/c4/9b/100x_c49bd707fe5c2f1c44038605a3838119.png" width="50" alt="" style="vertical-align: middle; border: 0" class="ev-tooltipImage">
-                                        <div class="ev-tooltip-content-position-top-left">
-                                            <div id="ev-tooltip2-content">2. Aliquid adipisci maiores, dolores recusandae sapiente</div>
+                                    <label for="tooltip2" class="tooltip2">
+                                        <img src="https://myclang.com/public/operations/fde9cd413018/c4/9b/100x_c49bd707fe5c2f1c44038605a3838119.png" width="50" alt="" style="vertical-align: middle; border: 0" class="tooltipImage">
+                                        <div class="tooltip-content-position-top-left">
+                                            <div id="tooltip2-content">2. Aliquid adipisci maiores, dolores recusandae sapiente</div>
                                         </div>
                                     </label>
-                                    <label for="ev-tooltip3" class="ev-tooltip3">
-                                        <img src="https://myclang.com/public/operations/fde9cd413018/01/aa/100x_01aaf212c819cadbfd7e5ee229c26bf8.png" width="50" alt="" style="vertical-align: middle; border: 0" class="ev-tooltipImage">
-                                        <div class="ev-tooltip-content-position-bottom-left">
-                                            <div id="ev-tooltip3-content">3. repudiandae sed alias expedita repellendus soluta</div>
+                                    <label for="tooltip3" class="tooltip3">
+                                        <img src="https://myclang.com/public/operations/fde9cd413018/01/aa/100x_01aaf212c819cadbfd7e5ee229c26bf8.png" width="50" alt="" style="vertical-align: middle; border: 0" class="tooltipImage">
+                                        <div class="tooltip-content-position-bottom-left">
+                                            <div id="tooltip3-content">3. repudiandae sed alias expedita repellendus soluta</div>
                                         </div>
                                     </label>
                                 </div>
-                                <div id="ev-mtooltip1-content">
-                                    <table role="presentation">
+                                <div id="mtooltip1-content">
+                                    <table role="none">
                                         <tr>
                                             <td>
-                                                <table role="presentation" align="left">
+                                                <table role="none" align="left">
                                                     <tr>
                                                         <td style="padding: 0 10px 10px 0">
                                                             <img src="https://myclang.com/public/operations/cd2588dd1e5ed560332fd2d23e3a0f30/litmus-pillow-sq-1-300x300_11.png">
@@ -404,8 +404,8 @@
                                         </tr>
                                     </table>
                                 </div>
-                                <div id="ev-mtooltip2-content">2. Aliquid adipisci maiores, dolores recusandae sapiente</div>
-                                <div id="ev-mtooltip3-content">3. repudiandae sed alias expedita repellendus soluta</div>
+                                <div id="mtooltip2-content">2. Aliquid adipisci maiores, dolores recusandae sapiente</div>
+                                <div id="mtooltip3-content">3. repudiandae sed alias expedita repellendus soluta</div>
                             </div>
                             <!--<![endif]-->
                         </div>
