@@ -5,14 +5,14 @@
 <!--{$startHead = '<head>'}-->
 <!--{$endHead = '</head>'}-->
 <!DOCTYPE html>
-<html lang="nl" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<html lang="nl" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word">
 <!--{if $broadcastdate}-->
 <!--{$startHead}}{{$endHead}-->
 <!--{/if}-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1 user-scalable=yes">
     <meta name="format-detection" content="telephone=no, date=no, address=no, email=no">
     <meta name="x-apple-disable-message-reformatting">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -440,22 +440,6 @@
             text-decoration: inherit
         }
 
-        @media only screen and (max-width: 639px) {
-
-            u+.body,
-            div>u+.body {
-                width: 100vw !important;
-                min-width: 100vw !important;
-                margin: 0 !important;
-                padding: 0 !important
-            }
-
-            div>u+.body {
-                width: inherit !important;
-                min-width: inherit !important;
-            }
-        }
-
         /* Necessary when using interactive objects */
         @media screen and (max-width:9999px) {
             u+.body .fallback {
@@ -486,85 +470,102 @@
             display: none !important
         }
     </style>
-    <!-- Specific Samsung Mail App Targeting -->
+    <!-- Specific Samsung Mail Targeting to prevent Autowidth feature -->
     <style>
-        @media screen and (-webkit-min-device-pixel-ratio: 0) {
-
-            #MessageViewBody,
-            #MessageWebViewDiv {
-                margin: 0 !important;
-                zoom: 1 !important
-            }
-
-            /* Necessary when using interactive objects */
-            #MessageViewBody .fallback {
-                display: block !important
-            }
-
-            #MessageViewBody .interactive {
-                display: none !important
-            }
-
-            #MessageViewBody .samsung {
-                display: none !important
-            }
+        @media screen and (max-width: 384px) {
+          .mail-message-content {
+            width: 414px !important;
+          }
         }
-    </style>
-    <!-- Specific Outlook App Targeting -->
-    <style>
-        body[data-outlook-cycle] {
-            min-width: 100vw !important;
-            margin: 0 !important;
-            padding: 0 !important;
+        #MessageWebViewDiv .wrapper {
+          container-name: wrapper;
+          container-type: inline-size;
         }
-
-        body[data-outlook-cycle] .outlook-overflow-scaling,
-        body[data-outlook-cycle] .wrapper {
-            width: 100vw !important;
-            min-width: 100vw !important;
-            height: auto !important;
-            display: block !important;
-            transform: scale(1) !important
-        }
-
-        /* Necessary when using interactive objects */
-        body[data-outlook-cycle] .fallback {
-            display: block !important
-        }
-
-        body[data-outlook-cycle] .interactive {
-            display: none !important
-        }
-    </style>
+      </style>
     <!--[if mso]>
 	<xml>
 	<o:OfficeDocumentSettings>
 	<o:AllowPNG/>
 	<o:PixelsPerInch>96</o:PixelsPerInch>
 	</o:OfficeDocumentSettings>
+    <w:WordDocument>
+        <w:DontUseAdvancedTypographyReadingMail />
+    </w:WordDocument>
 	</xml>
 	<![endif]-->
-    <!-- Outlook 2007 and above Specific Styles -->
-    <!--[if gte mso 12]>
-	<style>
-		a,
-        a:link,
-        a:visited,
-        a:hover {
-            text-decoration: none
+    <!--[if gte mso 16]>
+    <style>
+        li {
+          margin-left: -30px;
         }
-		li {
-			margin: 5px 0 5px 20px !important;
-			text-indent: -1em
-		}
-	</style>
-	<![endif]-->
+      </style>
+    <![endif]-->
+    <!--[if gte mso 15]>
+    <style>
+        body {
+          background-color: transparant;
+        }
+      </style>
+      <![endif]-->
 </head>
 
-<body xml:lang="nl" class="body darkmode">
-    <div lang="nl" dir="ltr" style="display: none">[PREHEADER]</div>
-    <div lang="nl" dir="ltr" style="display: none"> &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;&shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;&nbsp; </div>
+<body xml:lang="nl" lang="nl" class="body darkmode">
     <div role="article" aria-roledescription="email" aria-label="{{$subject}}" lang="nl" dir="ltr" style="font-size: medium; font-size: max(16px, 1rem)" class="wrapper darkmode">
+    <div lang="nl" dir="ltr" style="display: none">[PREHEADER]</div>
+    <div lang="nl" dir="ltr" style="display: none">&#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847;
+        &#8199;&#847; &#8199;&#847; &#8199;&#847; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy;
+        &shy; &shy; &shy; &nbsp;</div>
     <!--{if !$broadcastdate}-->
     <center>
     <!--{/if}-->
