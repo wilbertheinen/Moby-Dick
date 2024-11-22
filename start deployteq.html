@@ -1,6 +1,14 @@
+<!--{strip}-->
+<!--{broadcast field='broadcastdate' assign='broadcastdate'}-->
+<!--{broadcast field='subject' assign='subject'}-->
+<!--{eval var=$subject assign='subject'}-->
+<!--{$startHead = '<head>'}-->
+<!--{$endHead = '</head>'}-->
 <!DOCTYPE html>
 <html lang="nl" dir="ltr" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word">
-<head></head>
+<!--{if $broadcastdate}-->
+<!--{$startHead}}{{$endHead}-->
+<!--{/if}-->
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +18,13 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <base target="_blank">
     <title></title>
+    <!--{if !$broadcastdate}-->
+    <style>
+        div[data-type=object-instance-collection] {
+            width: 100% !important
+        }
+    </style>
+    <!--{/if}-->
     <!-- Reset Styles -->
     <style>
         * {
@@ -97,6 +112,36 @@
         }
     </style>
     <!-- Darkmode -->
+    <!--{function name=invertColor}}
+        {{$hexTranslationArray = [
+            '0' => 'f',
+            '1' => 'e',
+            '2' => 'd',
+            '3' => 'c',
+            '4' => 'b',
+            '5' => 'a',
+            '6' => '9',
+            '7' => '8',
+            '8' => '7',
+            '9' => '6',
+            'a' => '5',
+            'b' => '4',
+            'c' => '3',
+            'd' => '2',
+            'e' => '1',
+            'f' => '0'
+            ]
+        }}
+
+        {{$color = $color|spacify:","}}
+        {{$originalHexArray = ","|explode:$color}}
+
+        {{foreach from=$originalHexArray item=i}}
+        {{$newHexArray[] = $hexTranslationArray[$i]}}
+        {{/foreach}}
+
+        #{{''|implode:$newHexArray}}
+    {{/function}-->
     <meta name="color-scheme" content="light dark only">
     <style>
         :root {
@@ -108,22 +153,22 @@
             body:not([class^="x_"]),
             .body:not([class^="x_"]),
             .wrapper:not([class^="x_"]) {
-                background-color: #060603 !important;
-                background-image: linear-gradient(#060603, #060603) !important
+                background-color: {{invertColor color='#f9f9fc'}} !important;
+                background-image: linear-gradient({{invertColor color='#f9f9fc'}}, {{invertColor color='#f9f9fc'}}) !important
             }
 
             .content:not([class^="x_"]) {
-                background-color: #000 !important;
-                background-image: linear-gradient(#000, #000) !important
+                background-color: {{invertColor color='#fff'}} !important;
+                background-image: linear-gradient({{invertColor color='#fff'}}, {{invertColor color='#fff'}}) !important
             }
 
             .button:not([class^="x_"]),
             .button:not([class^="x_"]) a:not([class^="x_"]) {
-                background-color: #dbba00 !important;
-                background-image: linear-gradient(#dbba00, #dbba00) !important;
-                border: 1px solid #dbba00 !important;
-                color: #000 !important;
-                -webkit-text-fill-color: #000 !important
+                background-color: {{invertColor color='#2445ff'}} !important;
+                background-image: linear-gradient({{invertColor color='#2445ff'}}, {{invertColor color='#2445ff'}}) !important;
+                border: 1px solid {{invertColor color='#2445ff'}} !important;
+                color: {{invertColor color='#fff'}} !important;
+                -webkit-text-fill-color: {{invertColor color='#fff'}} !important
             }
 
             .button:not([class^="x_"]) a:not([class^="x_"]) {
@@ -134,14 +179,14 @@
             .content:not([class^="x_"]) h1:not([class^="x_"]) a:not([class^="x_"]),
             .content:not([class^="x_"]) h2:not([class^="x_"]),
             .content:not([class^="x_"]) h2:not([class^="x_"]) a:not([class^="x_"]) {
-                color: #e8e7e1 !important;
-                -webkit-text-fill-color: #e8e7e1 !important
+                color: {{invertColor color='#17181e'}} !important;
+                -webkit-text-fill-color: {{invertColor color='#17181e'}} !important
             }
 
             .content:not([class^="x_"]) p:not([class^="x_"]),
             .content:not([class^="x_"]) p:not([class^="x_"]) a:not([class^="x_"]) {
-                color: #b3ad93 !important;
-                -webkit-text-fill-color: #b3ad93 !important;
+                color: {{invertColor color='#4c526c'}} !important;
+                -webkit-text-fill-color: {{invertColor color='#4c526c'}} !important;
             }
 
             img:not([class^="x_"]) {
@@ -172,18 +217,18 @@
         [data-ogsb] body,
         [data-ogsb] .body,
         [data-ogsb] .wrapper {
-            background-color: #060603 !important
+            background-color: {{invertColor color='#f9f9fc'}} !important
         }
 
         [data-ogsb] .content {
-            background-color: #000 !important
+            background-color: {{invertColor color='#fff'}} !important
         }
 
         [data-ogsb] .button,
         [data-ogsb] .button a {
-            background-color: #dbba00 !important;
-            border: 1px solid #dbba00 !important;
-            color: #000 !important
+            background-color: {{invertColor color='#2445ff'}} !important;
+            border: 1px solid {{invertColor color='#2445ff'}} !important;
+            color: {{invertColor color='#fff'}} !important
         }
 
         [data-ogsb] .button a {
@@ -194,12 +239,12 @@
         [data-ogsb] h1 a,
         [data-ogsb] h2,
         [data-ogsb] h2 a {
-            color: #e8e7e1 !important
+            color: {{invertColor color='#17181e'}} !important
         }
 
         [data-ogsb] p,
         [data-ogsb] p a {
-            color: #b3ad93 !important
+            color: {{invertColor color='#4c526c'}} !important
         }
     </style>
     <!-- Webfont Styles -->
@@ -496,7 +541,15 @@
     <div role="article" aria-roledescription="email" aria-label="{{$subject}}" lang="nl" dir="ltr" style="font-size: medium; font-size: max(16px, 1rem)" class="wrapper darkmode">
     <div lang="nl" dir="ltr" style="display: none">[PREHEADER]</div>
     <div lang="nl" dir="ltr" style="display: none"> &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &#8199;&#847; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &shy; &nbsp;</div>
-
+    <!--{if !$broadcastdate}-->
+    <center>
+    <!--{/if}-->
+    
+    <!--{if !$broadcastdate}-->
+    </center>
+    <!--{/if}-->
     </div>
 </body>
+
 </html>
+<!--{/strip}-->
